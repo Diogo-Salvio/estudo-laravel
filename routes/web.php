@@ -2,13 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    $nome = "Diogo";
+use App\Http\Controllers\EventController;
 
-    return view('welcome', ['nome' => $nome]);
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
+
+
+Route::get('/contacts', function () {
+    return view('contacts');
 });
 
-
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/contact/{id}', function ($id) {
+    return view('contact', ['id' => $id]);
 });

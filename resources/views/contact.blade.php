@@ -1,2 +1,9 @@
-<h1>contato</h1>
-<a href="/"> Voltar para  a home</a>
+@extends('layouts.main')
+
+@section('title', 'Contato Singular')
+
+@section('content')
+
+    <p>Exibindo produto id: {{ $id }}</p>
+
+@endsection
