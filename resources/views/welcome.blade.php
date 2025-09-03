@@ -4,11 +4,11 @@
 
 @section('content')
 
-<h1>Titulo</h1>
-@if( 10> 544) 
-<p>True</p>
- @endif
-<p>{{ $nome }}</p>
+@foreach ($events as $event)
+
+    <p>{{ $event->title }} -- {{ $event->description }}</p>
+
+@endforeach
 
 
 @endsection
